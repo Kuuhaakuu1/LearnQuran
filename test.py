@@ -3,8 +3,6 @@ import os.path
 import os
 import pandas as pd
 import streamlit as st
-from streamlit_extras.add_vertical_space import add_vertical_space 
-
 # %%
 raw_quran = pd.read_csv('./Arabic-Original.csv/Arabic-Original.csv', header=None)
 surah_names = pd.read_csv('./Arabic-Original.csv/surahList.csv', header=None)
