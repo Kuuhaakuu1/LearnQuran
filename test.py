@@ -3,7 +3,17 @@ import os.path
 import os
 import pandas as pd
 import streamlit as st
+
 # %%
+
+def file_selector(folder_path='.'):
+    filenames = os.listdir(folder_path)
+    selected_filename = st.selectbox('Select a file', filenames)
+    return os.path.join(folder_path, selected_filename)
+
+filename = file_selector()
+st.write('You selected `%s`' % filename)
+
 raw_quran = pd.read_csv('./Arabic-Original.csv/Arabic-Original.csv', header=None)
 surah_names = pd.read_csv('./Arabic-Original.csv/surahList.csv', header=None)
 
