@@ -14,8 +14,8 @@ import streamlit as st
 # filename = file_selector()
 # st.write('You selected `%s`' % filename)
 # path = os.path.dirname(__file__)
-raw_quran = pd.read_csv('./Arabic-Original/Arabic-Original.csv', header=None)
-surah_names = pd.read_csv('./Arabic-Original/surahList.csv', header=None)
+raw_quran = pd.read_csv('Arabic-Original.csv', header=None)
+surah_names = pd.read_csv('surahList.csv', header=None)
 
 # Directory path
 directory = './Surah'
