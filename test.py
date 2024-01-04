@@ -6,16 +6,17 @@ import streamlit as st
 
 # %%
 
-def file_selector(folder_path='.'):
-    filenames = os.listdir(folder_path)
-    selected_filename = st.selectbox('Select a file', filenames)
-    return os.path.join(folder_path, selected_filename)
+# def file_selector(folder_path='.'):
+#     filenames = os.listdir(folder_path)
+#     selected_filename = st.selectbox('Select a file', filenames)
+#     return os.path.join(folder_path, selected_filename)
 
-filename = file_selector()
-st.write('You selected `%s`' % filename)
+# filename = file_selector()
+# st.write('You selected `%s`' % filename)
+
 # path = os.path.dirname(__file__)
 raw_quran = pd.read_csv('Arabic-Original.csv', header=None)
-surah_names = pd.read_csv('surahList.csv', header=None)
+surah_names = pd.read_csv('SurahList.csv', header=None)
 
 # Directory path
 directory = './Surah'
