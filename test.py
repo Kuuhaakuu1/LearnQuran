@@ -13,7 +13,7 @@ import streamlit as st
 
 # filename = file_selector()
 # st.write('You selected `%s`' % filename)
-
+st.markdown(""" <style> input { unicode-bidi:bidi-override; direction: RTL; } </style> """, unsafe_allow_html=True) 
 # path = os.path.dirname(__file__)
 raw_quran = pd.read_csv('Arabic-Original.csv', header=None)
 surah_names = pd.read_csv('SurahList.csv', header=None)
